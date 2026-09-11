@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" width="100%" height="100%">
+  <defs>
+    <!-- Liquid Metal Gold Gradient -->
+    <linearGradient id="liquidGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff275" />
+      <stop offset="30%" stop-color="#ffd700" />
+      <stop offset="60%" stop-color="#f59e0b" />
+      <stop offset="90%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#fffbeb" />
+    </linearGradient>
+
+    <!-- Liquid Crimson Metallic Gradient -->
+    <linearGradient id="liquidCrimsonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e60026" />
+      <stop offset="40%" stop-color="#b8001c" />
+      <stop offset="80%" stop-color="#8a0014" />
+      <stop offset="100%" stop-color="#c8102e" />
+    </linearGradient>
+
+    <!-- Specular Highlight Filter -->
+    <filter id="liquidMetalShimmer" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur" />
+      <feSpecularLighting in="blur" surfaceScale="5" specularConstant="1.2" specularExponent="20" lighting-color="#ffffff" result="specOut">
+        <fePointLight x="150" y="80" z="200" />
+      </feSpecularLighting>
+      <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut" />
+      <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
+    </filter>
+  </defs>
+
+  <!-- Hindi Wordmark -->
+  <text x="70" y="45" font-family="'Plus Jakarta Sans', 'Noto Sans Devanagari', sans-serif" font-size="36" font-weight="800" fill="#c8102e" letter-spacing="1">भारतीय डाक</text>
+  <text x="70" y="72" font-family="'Plus Jakarta Sans', 'Noto Sans Devanagari', sans-serif" font-size="20" font-weight="600" fill="#c8102e" letter-spacing="0.5">डाक सेवा-जन सेवा</text>
+
+  <!-- Red Metallic Base Rectangle -->
+  <rect x="70" y="82" width="230" height="130" rx="4" fill="url(#liquidCrimsonGrad)" filter="url(#liquidMetalShimmer)" />
+
+  <!-- Dynamic Molten Gold Swoosh Lines -->
+  <!-- Swoosh 1 (Upper) -->
+  <path d="M 370 45 C 280 95 190 195 140 165 C 110 145 60 120 10 135 C 50 122 105 130 135 150 C 180 180 270 85 370 45 Z" fill="url(#liquidGoldGrad)" filter="url(#liquidMetalShimmer)" />
+
+  <!-- Swoosh 2 (Middle) -->
+  <path d="M 340 75 C 265 118 185 208 140 182 C 115 165 75 145 35 155 C 70 144 110 152 135 168 C 175 195 255 110 340 75 Z" fill="url(#liquidGoldGrad)" filter="url(#liquidMetalShimmer)" />
+
+  <!-- Swoosh 3 (Lower) -->
+  <path d="M 310 105 C 250 142 180 220 140 200 C 120 185 90 170 60 176 C 88 168 115 174 135 186 C 170 208 240 135 310 105 Z" fill="url(#liquidGoldGrad)" filter="url(#liquidMetalShimmer)" />
+
+  <!-- English Wordmark -->
+  <text x="165" y="240" font-family="'Plus Jakarta Sans', serif" font-size="30" font-weight="800" fill="#c8102e" letter-spacing="0.5">India Post</text>
+  <text x="165" y="262" font-family="'Plus Jakarta Sans', serif" font-size="16" font-weight="600" fill="#c8102e">Dak Sewa-Jan Sewa</text>
+</svg>
